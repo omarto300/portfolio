@@ -23,9 +23,17 @@ export default function HomePage() {
               microservicios basadas en comunicaciones como REST,AMQP y
               WebSockets.
             </p>
-            <button className="bg-blue-600 text-white rounded-3xl p-2 mt-2">
-              Ver Proyectos
-            </button>
+            <div className="flex flex-col md:flex-row items-start justify-around md:items-center">
+              <button className="bg-blue-600 text-white rounded-3xl p-2 mt-2">
+                Descargar CV
+              </button>
+              <button className="bg-blue-600 text-white rounded-3xl p-2 mt-2 ml-2">
+                Linkedin
+              </button>
+              <button className="bg-blue-600 text-white rounded-3xl p-2 mt-2 ml-2">
+                GitHub
+              </button>
+            </div>
           </div>
         </section>
         <section className="w-full mb-4 shadow-lg p-6 bg-white rounded-lg flex justify-around items-center">
@@ -44,7 +52,9 @@ export default function HomePage() {
         </section>
         <div className="clear-both w-full">
           <div className="shadow-lg p-6 bg-white rounded-lg">
-            <h2 className="text-2xl mb-4 font-semibold text-center">Actividades principales</h2>
+            <h2 className="text-2xl mb-4 font-semibold text-center">
+              Actividades principales
+            </h2>
             <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               <ListItem text="Desarrollo de aplicaciones backend con Java y Spring Boot."></ListItem>
               <ListItem text="Implementación de APIs RESTful y servicios web."></ListItem>
