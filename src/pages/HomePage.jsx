@@ -1,21 +1,32 @@
 import imageReact from "../assets/heroImage.png";
+import Button from "../components/Button";
 import Habilidades from "../components/Habilidades";
 import ListItem from "../components/ListItem";
 
 export default function HomePage() {
   return (
     <>
-      <div className="flex flex-col items-center p-6">
-        <section className="relative w-full h-1/2 mb-4">
+      <div className="flex flex-col items-center">
+        <section className="relative">
           <img
             src={imageReact}
             alt="Profile"
-            className="rounded-lg w-1/3 object-cover"
+            className="ml-2 mb-2 float-right rounded-full shadow-xl border-4 border-white"
+            style={{
+              width: "300px",
+              height: "300px",
+              imagePosition: "right",
+              clipPath: "circle(50%)",
+              shapeOutside: `circle(${300 / 2 + 2}px)`,
+            }}
           />
-          <div className="w-3/5 lg:w-7/10 absolute right-2 top-1/2 transform -translate-y-1/3 bg-white p-4 rounded shadow-lg">
+          <div className="text-content">
             <h1 className="text-3xl font-black">
-              Hola, soy Omar Sanchez Santiago
+              Omar Sanchez Santiago
             </h1>
+            <h2 className="text-2xl font-semibold text-gray-500">
+              Desarrollador Backend
+            </h2>
             <p className="font-light">
               Desarrollador con mas de 8 años de experiencia con lenguajes como
               Java, Javascript, SQL, Bases de datos no relacionales, tambien he
@@ -23,20 +34,20 @@ export default function HomePage() {
               microservicios basadas en comunicaciones como REST,AMQP y
               WebSockets.
             </p>
-            <div className="flex flex-col md:flex-row items-start justify-around md:items-center">
-              <button className="bg-blue-600 text-white rounded-3xl p-2 mt-2">
+            <div className="flex flex-col md:flex-row items-start justify-around md:items-center gap-2">
+              <Button variant="active">
                 Descargar CV
-              </button>
-              <button className="bg-blue-600 text-white rounded-3xl p-2 mt-2 ml-2">
+              </Button>
+              <Button variant="active">
                 Linkedin
-              </button>
-              <button className="bg-blue-600 text-white rounded-3xl p-2 mt-2 ml-2">
+              </Button>
+              <Button variant="active">
                 GitHub
-              </button>
+              </Button>
             </div>
           </div>
         </section>
-        <section className="w-full mb-4 shadow-lg p-6 bg-white rounded-lg flex justify-around items-center">
+        <section className="w-full my-6 p-6 bg-white rounded-lg flex justify-around items-center">
           <div>
             <h2 className="text-gray-400">Proyectos</h2>
             <p className="text-5xl font-extrabold">5+</p>
