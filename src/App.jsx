@@ -32,15 +32,9 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen display flex justify-center items-center bg-gray-500">
-        <div className="shadow w-full md:w-4/6 h-11/12 relative rounded-3xl bg-white p-3">
-          {<Navbar handleNavigation={handleNavigation} />}
-          <div className="h-full ml-10">
-            <div className="overflow-x-hidden overflow-y-auto h-full">
-              {renderPage()}
-            </div>
-          </div>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {<Navbar handleNavigation={handleNavigation} />}
+        {renderPage()}
       </div>
     </>
   );

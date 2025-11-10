@@ -1,14 +1,18 @@
-export default function Button({ onClick, children,variant = "inacttive" }) {
+// Componente Button mejorado
+const Button = ({ children, variant = "primary", icon: Icon, href = "#" }) => {
   const variants = {
-    active: "bg-text",
-    inacttive: "text-gray-500 dark:text-dark-6 hover:bg-primary hover:text-white",
-  }
+    primary: "bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl",
+    outline: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50"
+  };
+  
   return (
-    <button
-      onClick={onClick}
-      className={`inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${variants[variant]}`}
+    <a 
+      href={href}
+      className={`${variants[variant]} px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 transform hover:scale-105`}
     >
+      {Icon && <Icon size={20} />}
       {children}
-    </button>
+    </a>
   );
-}
+};
+export default Button;
