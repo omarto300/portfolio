@@ -4,7 +4,6 @@ import { Home, User, Briefcase, Code, Mail, Menu, X } from "lucide-react";
 const pages = [
   { name: "home",label: "Inicio", icon: Home },
   { name: "projects" ,label: "Proyectos", icon: User},
-  { name: "tecnologias",label: "Tecnologias", icon: Briefcase  },
   { name: "experience",label: "Experience", icon: Code },
   { name: "contact",label: "Contacto", icon: Mail },
 ];

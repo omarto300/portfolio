@@ -1,29 +1,30 @@
-import { Download, Linkedin, Github, Code, Database, Cloud, Users, TestTube, Wrench, Rocket } from 'lucide-react';
-import ListItem from '../components/ListItem';
-import Button from '../components/Button';
-import StatCard from '../components/StatCard';
+import {
+  Download,
+  Linkedin,
+  Github,
+  Code,
+  Database,
+  Cloud,
+  Users,
+  TestTube,
+  Wrench,
+  Rocket,
+} from "lucide-react";
+import ListItem from "../components/ListItem";
+import Button from "../components/Button";
+import StatCard from "../components/StatCard";
 
 export default function DeveloperPortfolio() {
-  const activities = [
-    { text: "Desarrollo de aplicaciones backend con Java y Spring Boot", icon: Code },
-    { text: "Implementación de APIs RESTful y servicios web", icon: Rocket },
-    { text: "Optimización de bases de datos SQL y NoSQL", icon: Database },
-    { text: "Automatización de procesos con herramientas DevOps", icon: Wrench },
-    { text: "Mentoría y liderazgo en equipos de desarrollo", icon: Users },
-    { text: "Diseño e implementación de pruebas unitarias y de integración", icon: TestTube },
-    { text: "Despliegue y gestión de aplicaciones en la nube (AWS)", icon: Cloud }
-  ];
-
+  
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4">
-      <div className="max-w-6xl mx-auto">
-        
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50 py-12 px-4">
+      <div className="container mx-auto">
         {/* Hero Section */}
-        <section className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 mb-8 overflow-hidden relative">
+        <section className=" bg-white rounded-2xl shadow-2xl p-8 md:p-12 mb-8 overflow-hidden relative">
           {/* Decoración de fondo */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 -z-10"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-30 -z-10"></div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 items-center">
             {/* Imagen de perfil */}
             <div className="md:col-span-1 flex justify-center">
@@ -36,7 +37,7 @@ export default function DeveloperPortfolio() {
                 />
               </div>
             </div>
-            
+
             {/* Contenido */}
             <div className="md:col-span-2 space-y-6">
               <div>
@@ -48,12 +49,17 @@ export default function DeveloperPortfolio() {
                 </h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"></div>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  Desarrollador con más de <span className="font-semibold text-blue-600">8 años de experiencia</span> especializado en Java, JavaScript y SQL. 
-                  Experto en diseñar e implementar arquitecturas escalables, desde monolitos hasta microservicios, 
-                  utilizando protocolos de comunicación como REST, AMQP y WebSockets.
+                  Desarrollador con más de{" "}
+                  <span className="font-semibold text-blue-600">
+                    8 años de experiencia
+                  </span>{" "}
+                  especializado en Java, JavaScript y SQL. Experto en diseñar e
+                  implementar arquitecturas escalables, desde monolitos hasta
+                  microservicios, utilizando protocolos de comunicación como
+                  REST, AMQP y WebSockets.
                 </p>
               </div>
-              
+
               {/* Botones de acción */}
               <div className="flex flex-wrap gap-4">
                 <Button variant="primary" icon={Download}>
@@ -68,33 +74,12 @@ export default function DeveloperPortfolio() {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <StatCard label="Proyectos" value="5+" icon={Rocket} />
-          <StatCard label="Años de Experiencia" value="8+" icon={Code} />
-          <StatCard label="Tecnologías" value="10+" icon={Database} />
-        </section>
-
-        {/* Actividades principales */}
-        <section className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-              Actividades Principales
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto"></div>
-          </div>
-          
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {activities.map((activity, index) => (
-              <ListItem 
-                key={index} 
-                text={activity.text} 
-                icon={activity.icon}
-              />
-            ))}
-          </ul>
+          {/* Stats Section */}
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 mt-12">
+            <StatCard label="Proyectos" value="5+" icon={Rocket} />
+            <StatCard label="Años de Experiencia" value="8+" icon={Code} />
+            <StatCard label="Tecnologías" value="10+" icon={Database} />
+          </section>
         </section>
       </div>
     </div>

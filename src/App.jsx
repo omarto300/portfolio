@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Proyects from "./pages/ProyectsPage";
 import HomePage from "./pages/HomePage";
-import TecnologiasPage from "./pages/TecnologiasPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import Navbar from "./components/Navbar";
 import Contact from "./pages/Contact";
@@ -19,8 +18,6 @@ function App() {
         return <HomePage />;
       case "projects":
         return <Proyects />;
-      case "tecnologias":
-        return <TecnologiasPage />;
       case "experience":
         return <ExperiencePage />;
       case "contact":
