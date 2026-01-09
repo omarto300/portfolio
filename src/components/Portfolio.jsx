@@ -8,7 +8,7 @@ export default function Portfolio() {
       description: "Una plataforma moderna de comercio electrónico con gestión de inventario en tiempo real",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      repoUrl: "https://github.com/usuario/ecommerce",
+      repoUrl: "https://github.com/omarto300/codewars",
       demoUrl: "https://demo.proyecto.com",
       date: "2024",
       longDescription: "Este proyecto implementa una solución completa de e-commerce con características avanzadas como carrito de compras, procesamiento de pagos, gestión de usuarios y panel de administración. Utiliza arquitectura moderna con microservicios y está optimizado para rendimiento y escalabilidad."
@@ -38,7 +38,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-12 px-4">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50 py-12 px-4">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap -mx-4">
           {projects.map((project, idx) => (

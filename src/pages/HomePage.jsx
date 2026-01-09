@@ -15,7 +15,25 @@ import Button from "../components/Button";
 import StatCard from "../components/StatCard";
 
 export default function DeveloperPortfolio() {
-  
+  const handleDownload = () => {
+    // En GitHub Pages, usa process.env.PUBLIC_URL
+    const pdfUrl = `${import.meta.env.BASE_URL}/CV_OMAR_SANCHEZ.pdf`;
+    
+    // Crear un enlace temporal y hacer click
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    
+    link.download = 'OMAR_SANCHEZ_SANTIAGO.pdf'; // Nombre del archivo al descargar
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleGoPage = (linkPage) => {
+    window.open(linkPage, '_blank');
+  };
+
+
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50 py-12 px-4">
       <div className="container mx-auto">
@@ -29,7 +47,7 @@ export default function DeveloperPortfolio() {
             {/* Imagen de perfil */}
             <div className="md:col-span-1 flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-50 animate-pulse"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-blue-600 to-purple-600 rounded-full blur-lg opacity-50 animate-pulse"></div>
                 <img
                   src="https://api.dicebear.com/7.x/avataaars/svg?seed=Omar"
                   alt="Omar Sanchez Santiago"
@@ -41,13 +59,13 @@ export default function DeveloperPortfolio() {
             {/* Contenido */}
             <div className="md:col-span-2 space-y-6">
               <div>
-                <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                <h1 className="text-4xl md:text-5xl font-black bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                   Omar Sanchez Santiago
                 </h1>
                 <h2 className="text-2xl md:text-3xl font-semibold text-gray-600 mb-4">
                   Desarrollador Backend
                 </h2>
-                <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"></div>
+                <div className="w-20 h-1 bg-linear-to-r from-blue-600 to-purple-600 rounded-full mb-4"></div>
                 <p className="text-gray-600 leading-relaxed text-lg">
                   Desarrollador con más de{" "}
                   <span className="font-semibold text-blue-600">
@@ -62,13 +80,13 @@ export default function DeveloperPortfolio() {
 
               {/* Botones de acción */}
               <div className="flex flex-wrap gap-4">
-                <Button variant="primary" icon={Download}>
+                <Button variant="primary" icon={Download} onClick={handleDownload}>
                   Descargar CV
                 </Button>
-                <Button variant="outline" icon={Linkedin}>
+                <Button variant="outline" icon={Linkedin} onClick={()=>handleGoPage('https://www.linkedin.com/in/omar920305/')}>
                   LinkedIn
                 </Button>
-                <Button variant="outline" icon={Github}>
+                <Button variant="outline" icon={Github} onClick={()=>handleGoPage('https://github.com/omarto300')}>
                   GitHub
                 </Button>
               </div>

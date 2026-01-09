@@ -20,12 +20,12 @@ export default function Navbar({ handleNavigation }) {
   return (
     <>
       <nav className="bg-white shadow-xl sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <div className="relative overflow-visible">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 transform skew-x-[-12deg] rounded-lg"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-blue-600 to-purple-600 transform -skew-x-12 rounded-lg"></div>
                 <h1 className="relative text-2xl font-black text-white px-6 py-2 z-10">
                   OS
                 </h1>
@@ -68,11 +68,11 @@ export default function Navbar({ handleNavigation }) {
                 >
                   <div
                     className={`
-                      absolute inset-0 transform skew-x-[-12deg] transition-all duration-300 rounded-md
+                      absolute inset-0 transform -skew-x-12 transition-all duration-300 rounded-md
                       ${
                         activeTab === item.id
-                          ? "bg-gradient-to-r from-blue-600 to-purple-600"
-                          : "bg-gray-100 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500"
+                          ? "bg-linear-to-r from-blue-600 to-purple-600"
+                          : "bg-gray-100 group-hover:bg-linear-to-r group-hover:from-blue-500 group-hover:to-purple-500"
                       }
                     `}
                   ></div>

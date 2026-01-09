@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { Github, ExternalLink, Code2, Layers, Calendar, X } from 'lucide-react';
-import ProjectDetail from './ProjectDetail';
 
 const ProjectCard = ({ 
   category = "Web Development",
@@ -8,13 +6,11 @@ const ProjectCard = ({
   description = "Una plataforma moderna de comercio electrónico con gestión de inventario en tiempo real",
   image = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
   technologies = ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-  repoUrl = "https://github.com/usuario/proyecto",
+  repoUrl = "https://github.com/omarto300/codewars",
   demoUrl = "https://demo.proyecto.com",
   date = "2024",
   longDescription = "Este proyecto implementa una solución completa de e-commerce con características avanzadas como carrito de compras, procesamiento de pagos, gestión de usuarios y panel de administración. Utiliza arquitectura moderna con microservicios y está optimizado para rendimiento y escalabilidad."
 }) => {
-  const [showDetail, setShowDetail] = useState(false);
-  const [showCard] = useState("all");
 
   const techColors = {
     "React": "bg-blue-500/10 text-blue-600 dark:text-blue-400",
@@ -38,11 +34,7 @@ const ProjectCard = ({
   return (
     <>
       <div
-        className={`w-full px-4 md:w-1/2 xl:w-1/3 ${
-          showCard === "all" || showCard === category.toLowerCase()
-            ? "block"
-            : "hidden"
-        }`}
+        className={"w-full px-4 md:w-1/2 xl:w-1/3"}
       >
         <div className="relative mb-12 group">
           <div className="overflow-hidden rounded-2xl relative">
@@ -56,7 +48,7 @@ const ProjectCard = ({
           
           <div className="relative z-10 mx-4 -mt-24 rounded-2xl bg-white py-8 px-6 shadow-2xl backdrop-blur-sm">
             <div className="flex items-center justify-between mb-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-violet-500 to-purple-500 text-white">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-linear-to-r from-violet-500 to-purple-500 text-white">
                 <Layers className="w-3 h-3" />
                 {category}
               </span>
@@ -91,7 +83,7 @@ const ProjectCard = ({
             </div>
 
             <button
-              onClick={() => setShowDetail(true)}
+              onClick={() => window.open(repoUrl, "_blank")}
               className="w-full flex items-center justify-center gap-2 rounded-xl border-2 border-violet-500 bg-violet-500 py-2.5 px-6 text-sm font-semibold text-white transition-all hover:bg-violet-600 hover:border-violet-600 hover:shadow-lg hover:shadow-violet-500/30 active:scale-95"
             >
               <Code2 className="w-4 h-4" />
@@ -100,9 +92,6 @@ const ProjectCard = ({
           </div>
         </div>
       </div>
-
-      {/* Modal de Detalle */}
-      {showDetail && <ProjectDetail />}
     </>
   );
 };
