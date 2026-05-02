@@ -32,7 +32,7 @@ export default function Navbar({ handleNavigation, activePage }) {
             <div className="shrink-0">
               <div className="relative overflow-visible">
                 <div className="absolute inset-0 bg-linear-to-r from-gray-900 to-gray-600 transform -skew-x-12 rounded-lg"></div>
-                <h1 className="relative text-2xl font-black text-white px-6 py-2 z-10">
+                <h1 translate="no" className="relative text-2xl font-black text-white px-6 py-2 z-10">
                   OS
                 </h1>
               </div>
@@ -78,7 +78,7 @@ export default function Navbar({ handleNavigation, activePage }) {
             <div className="flex items-center justify-between mb-16">
               <div className="relative overflow-visible">
                 <div className="absolute inset-0 bg-linear-to-r from-gray-100 to-gray-400 transform -skew-x-12 rounded-lg"></div>
-                <span className="relative text-2xl font-black text-gray-900 px-6 py-2 z-10 block">
+                <span translate="no" className="relative text-2xl font-black text-gray-900 px-6 py-2 z-10 block">
                   OS
                 </span>
               </div>
