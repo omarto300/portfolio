@@ -1,59 +1,70 @@
+import { useState } from 'react';
 import { Code2 } from 'lucide-react';
 import ProjectCard from './feactures/ProjectCard';
+import projects from '../data/proyects';
+
+const CATEGORIES = ['Todos', 'Web', 'Backend', 'Freelance', 'Algoritmos'];
 
 export default function Portfolio() {
-  const projects = [
-    {
-      category: "Web Development",
-      title: "E-commerce Platform",
-      description: "Una plataforma moderna de comercio electrónico con gestión de inventario en tiempo real",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-      technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      repoUrl: "https://github.com/omarto300/codewars",
-      demoUrl: "https://demo.proyecto.com",
-      date: "2024",
-      longDescription: "Este proyecto implementa una solución completa de e-commerce con características avanzadas como carrito de compras, procesamiento de pagos, gestión de usuarios y panel de administración. Utiliza arquitectura moderna con microservicios y está optimizado para rendimiento y escalabilidad."
-    },
-    {
-      category: "Backend",
-      title: "API REST con Spring Boot",
-      description: "Sistema de gestión empresarial con arquitectura hexagonal y microservicios",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
-      technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
-      repoUrl: "https://github.com/usuario/api-rest",
-      demoUrl: "",
-      date: "2023",
-      longDescription: "API RESTful robusta construida con Spring Boot siguiendo principios SOLID y clean architecture. Incluye autenticación JWT, documentación con Swagger, testing completo y CI/CD con Docker y Kubernetes."
-    },
-    {
-      category: "Frontend",
-      title: "Dashboard Analytics",
-      description: "Panel de control interactivo para visualización de datos en tiempo real",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      technologies: ["Vue", "TypeScript", "Chart.js", "Tailwind CSS"],
-      repoUrl: "https://github.com/usuario/dashboard",
-      demoUrl: "https://dashboard.proyecto.com",
-      date: "2024",
-      longDescription: "Dashboard moderno con gráficos interactivos, filtros avanzados y actualizaciones en tiempo real usando WebSockets. Diseñado con principios de UX/UI para ofrecer la mejor experiencia de usuario."
-    }
-  ];
+  const [activeFilter, setActiveFilter] = useState('Todos');
+
+  const filteredProjects =
+    activeFilter === 'Todos'
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-8 sm:py-12 px-4">
-      <div className="container mx-auto">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-8 sm:py-12 px-4 relative overflow-hidden">
+      {/* Decorative blobs */}
+      <div className="absolute top-20 right-10 w-72 h-72 bg-gray-200 rounded-full blur-3xl opacity-30 pointer-events-none" />
+      <div className="absolute bottom-20 left-10 w-72 h-72 bg-gray-200 rounded-full blur-3xl opacity-30 pointer-events-none" />
+
+      <div className="container mx-auto relative z-10">
         {/* Header */}
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-3">
             <Code2 className="w-8 h-8 text-gray-800 shrink-0" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">Proyectos</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold bg-linear-to-r from-gray-900 to-gray-500 bg-clip-text text-transparent">
+              Proyectos
+            </h1>
           </div>
-          <p className="text-slate-600 text-lg">Algunos de los proyectos que he desarrollado</p>
+          <p className="text-gray-600 text-lg">Algunos de los proyectos que he desarrollado</p>
         </div>
 
-        <div className="flex flex-wrap -mx-4">
-          {projects.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
+        {/* Filter tabs */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveFilter(cat)}
+              className={`px-4 py-2 rounded-full text-sm font-semibold border transition-all duration-200 cursor-pointer ${
+                activeFilter === cat
+                  ? 'bg-gray-900 text-white border-gray-900 shadow-md'
+                  : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400 hover:text-gray-900'
+              }`}
+            >
+              {cat}
+            </button>
           ))}
+        </div>
+
+        {/* Count */}
+        <p className="text-sm text-gray-500 mb-6">
+          {filteredProjects.length} proyecto{filteredProjects.length !== 1 ? 's' : ''}
+        </p>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+
+          {filteredProjects.length === 0 && (
+            <div className="col-span-full text-center py-16 text-gray-400">
+              <Code2 className="w-12 h-12 mx-auto mb-3 opacity-30" />
+              <p className="text-lg">No hay proyectos en esta categoría aún.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
