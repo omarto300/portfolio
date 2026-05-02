@@ -1,9 +1,11 @@
+import portfolioImg from '../assets/proyects/portfolio.png';
+
 const proyectos = [
   {
     id: 1,
     title: "Portfolio Personal",
     description: "Sitio web personal para mostrar mis proyectos, experiencia y habilidades como desarrollador.",
-    image: null,
+    image: portfolioImg,
     technologies: ["React", "Tailwind CSS", "Vite"],
     category: "Web",
     repoUrl: "https://github.com/omarto300/portfolio",
