@@ -1,9 +1,21 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-primary: #000814;
-  --color-secondary: #001D3D;
-  --color-accent: #003566;
-  --color-background: #FFC300;
-  --color-text: #FFD60A;
+  --color-primary: #111827;
+  --color-secondary: #374151;
+  --color-accent: #6b7280;
+  --color-muted: #9ca3af;
+  --color-border: #e5e7eb;
+  --color-surface: #f9fafb;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

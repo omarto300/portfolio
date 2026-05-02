@@ -1,5 +1,6 @@
+import { Code2 } from 'lucide-react';
 import ProjectCard from './feactures/ProjectCard';
-// Ejemplo de uso con múltiples proyectos
+
 export default function Portfolio() {
   const projects = [
     {
@@ -20,7 +21,7 @@ export default function Portfolio() {
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
       technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker"],
       repoUrl: "https://github.com/usuario/api-rest",
-      demoUrl: "https://api.proyecto.com/docs",
+      demoUrl: "",
       date: "2023",
       longDescription: "API RESTful robusta construida con Spring Boot siguiendo principios SOLID y clean architecture. Incluye autenticación JWT, documentación con Swagger, testing completo y CI/CD con Docker y Kubernetes."
     },
@@ -38,8 +39,17 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50 py-12 px-4">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-8 sm:py-12 px-4">
+      <div className="container mx-auto">
+        {/* Header */}
+        <div className="mb-10">
+          <div className="flex items-center gap-3 mb-3">
+            <Code2 className="w-8 h-8 text-gray-800 shrink-0" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">Proyectos</h1>
+          </div>
+          <p className="text-slate-600 text-lg">Algunos de los proyectos que he desarrollado</p>
+        </div>
+
         <div className="flex flex-wrap -mx-4">
           {projects.map((project, idx) => (
             <ProjectCard key={idx} {...project} />

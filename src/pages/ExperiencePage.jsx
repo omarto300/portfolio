@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Code } from 'lucide-react';
+import { Briefcase, Code, Clock, Building2, Layers } from 'lucide-react';
 
 const ExperiencePage = () => {
   const experiences = [
@@ -57,36 +57,52 @@ const ExperiencePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 p-8">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 p-4 sm:p-8">
       <div className="container mx-auto">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-10">
           <div className="flex items-center gap-3 mb-3">
-            <Briefcase className="w-8 h-8 text-blue-600" />
-            <h1 className="text-4xl font-bold text-slate-800">Experiencia Profesional</h1>
+            <Briefcase className="w-8 h-8 text-gray-800 shrink-0" />
+            <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">Experiencia Profesional</h1>
           </div>
-          <p className="text-slate-600 text-lg">Trayectoria como desarrollador Java</p>
+          <p className="text-slate-600 text-lg mb-5">Trayectoria como desarrollador Java</p>
+
+          {/* Stats chips */}
+          <div className="flex flex-wrap gap-3">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm">
+              <Clock className="w-4 h-4 text-gray-500" />
+              7+ Años de experiencia
+            </span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm">
+              <Building2 className="w-4 h-4 text-gray-500" />
+              3 Empresas
+            </span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm">
+              <Layers className="w-4 h-4 text-gray-500" />
+              Java / Backend
+            </span>
+          </div>
         </div>
 
         {/* Experience Cards */}
         <div className="space-y-6">
           {experiences.map((exp, index) => (
-            <div 
+            <div
               key={index}
               className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
             >
-              <div className="p-8">
+              <div className="p-4 sm:p-8">
                 {/* Company Header */}
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-start mb-6">
                   <div>
                     <h2 className="text-2xl font-bold text-slate-800 mb-1">
                       {exp.company}
                     </h2>
-                    <p className="text-xl text-blue-600 font-semibold">
+                    <p className="text-xl text-gray-800 font-semibold">
                       {exp.position}
                     </p>
                   </div>
-                  <span className="text-sm text-slate-500 bg-slate-100 px-4 py-2 rounded-full">
+                  <span className="self-start text-sm text-slate-500 bg-slate-100 px-4 py-2 rounded-full whitespace-nowrap">
                     {exp.period}
                   </span>
                 </div>
@@ -99,7 +115,7 @@ const ExperiencePage = () => {
                   <ul className="space-y-2">
                     {exp.responsibilities.map((resp, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-slate-600">
-                        <span className="text-blue-500 mt-1">▹</span>
+                        <span className="text-gray-500 mt-1">▹</span>
                         <span>{resp}</span>
                       </li>
                     ))}
@@ -114,7 +130,7 @@ const ExperiencePage = () => {
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-slate-600">
-                        <span className="text-green-500 mt-1">✓</span>
+                        <span className="text-gray-600 mt-1">✓</span>
                         <span>{achievement}</span>
                       </li>
                     ))}
@@ -131,9 +147,9 @@ const ExperiencePage = () => {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech, idx) => (
-                      <span 
+                      <span
                         key={idx}
-                        className="px-3 py-1 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-200"
+                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-200"
                       >
                         {tech}
                       </span>
