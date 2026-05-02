@@ -15,7 +15,7 @@ function App() {
   const renderPage = () => {
     switch (activePage) {
       case "home":
-        return <HomePage />;
+        return <HomePage handleNavigation={handleNavigation} />;
       case "projects":
         return <Proyects />;
       case "experience":
@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
-        {<Navbar handleNavigation={handleNavigation} />}
+        {<Navbar handleNavigation={handleNavigation} activePage={activePage} />}
         {renderPage()}
       </div>
     </>

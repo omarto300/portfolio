@@ -10,7 +10,7 @@ import profileImg from "../assets/profile.png";
 import Button from "../components/Button";
 import StatCard from "../components/StatCard";
 
-export default function DeveloperPortfolio() {
+export default function DeveloperPortfolio({ handleNavigation }) {
   const handleDownload = () => {
     const pdfUrl = `${import.meta.env.BASE_URL}/CV_OMAR_SANCHEZ.pdf`;
     const link = document.createElement('a');
@@ -101,8 +101,8 @@ export default function DeveloperPortfolio() {
           {/* Stats Section */}
           <div className="border-t border-gray-100 mt-10 pt-8">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <StatCard label="Proyectos" value="5+" icon={Rocket} />
-              <StatCard label="Años de Experiencia" value="8+" icon={Code} />
+              <StatCard label="Proyectos" value="5+" icon={Rocket} onClick={() => handleNavigation('projects')} />
+              <StatCard label="Años de Experiencia" value="8+" icon={Code} onClick={() => handleNavigation('experience')} />
               <StatCard label="Tecnologías" value="10+" icon={Database} />
             </div>
           </div>

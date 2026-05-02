@@ -9,8 +9,8 @@ const pages = [
   { name: "contact", label: "Contacto", icon: Mail },
 ];
 
-export default function Navbar({ handleNavigation }) {
-  const [activeTab, setActiveTab] = useState(pages[0].name);
+export default function Navbar({ handleNavigation, activePage }) {
+  const activeTab = activePage;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Lock body scroll when mobile menu is open
@@ -20,7 +20,6 @@ export default function Navbar({ handleNavigation }) {
   }, [mobileMenuOpen]);
 
   const handleClick = (page) => {
-    setActiveTab(page);
     handleNavigation(page);
   };
 
