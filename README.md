@@ -1,12 +1,59 @@
-# React + Vite
+# Portfolio Personal — Omar Sanchez Santiago
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web personal de portafolio. Desarrollador Backend con más de 8 años de experiencia especializado en Java, Spring Boot, Node.js y arquitecturas de microservicios.
 
-Currently, two official plugins are available:
+**Demo:** https://omarto300.github.io/portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Categoría | Tecnología |
+|-----------|------------|
+| UI | React 19 |
+| Build | Vite 7 |
+| Estilos | Tailwind CSS v4 (via plugin de Vite, sin PostCSS) |
+| Íconos | lucide-react |
+| Package manager | pnpm |
+| Despliegue | GitHub Pages |
+
+---
+
+## Secciones
+
+- **Home** — Hero con foto, stack tecnológico, botones para descargar CV y acceder a LinkedIn/GitHub, tarjetas de estadísticas (proyectos, años de experiencia, tecnologías).
+- **Proyectos** — Grid de 6 proyectos con filtros por categoría (Web, Backend, Freelance, Algoritmos). Cada tarjeta muestra descripción, tecnologías, y links al repositorio y demo.
+- **Experiencia** — Timeline de carrera con 3 empresas (IDS Comercial, Banco Azteca, TH Tec), responsabilidades, logros y tecnologías por rol.
+- **Contacto** — Formulario de contacto (nombre, email, teléfono, mensaje) e información de contacto directa.
+
+---
+
+## Desarrollo local
+
+```bash
+pnpm install
+pnpm dev        # servidor de desarrollo con HMR
+pnpm build      # build de producción
+pnpm preview    # previsualizar el build localmente
+pnpm lint       # ESLint
+```
+
+---
+
+## Estructura
+
+```
+src/
+├── pages/          # HomePage, ProyectsPage, ExperiencePage, Contact
+├── components/     # Navbar, Portfolio, ProjectCard, Button, StatCard, NavButton
+├── data/           # proyects.js, timeLineData.js
+└── assets/         # profile.png, CV_OMAR_SANCHEZ.pdf, logo.svg
+```
+
+La navegación entre páginas se maneja con un estado `activePage` en `App.jsx` — no hay React Router.
+
+---
+
+## Despliegue
+
+El despliegue es automático a GitHub Pages al hacer push a `main` vía GitHub Actions (`.github/workflows/deploy.yml`). El build corre con Node 24 y pnpm, y el artefacto `./dist` se publica bajo el path base `/portfolio/`.
