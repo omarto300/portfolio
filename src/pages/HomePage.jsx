@@ -6,7 +6,7 @@ import {
   Database,
   Rocket,
 } from "lucide-react";
-import profileImg from "../assets/profile.png";
+import profileImg from "../assets/profile-cartoon.png";
 import Button from "../components/Button";
 import StatCard from "../components/StatCard";
 
