@@ -14,7 +14,7 @@ export default function Portfolio() {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-8 sm:py-12 px-4 relative overflow-hidden">
+    <div className="py-8 sm:py-12 px-4 relative overflow-hidden">
       {/* Decorative blobs */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-gray-200 rounded-full blur-3xl opacity-30 pointer-events-none" />
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-gray-200 rounded-full blur-3xl opacity-30 pointer-events-none" />

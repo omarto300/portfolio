@@ -57,7 +57,7 @@ const ExperiencePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 p-4 sm:p-8">
+    <div className="p-4 sm:p-8">
       <div className="container mx-auto">
         {/* Header */}
         <div className="mb-10">

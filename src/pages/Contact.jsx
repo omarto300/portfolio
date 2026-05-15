@@ -2,7 +2,7 @@ import emailcon from "../assets/email.svg";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="py-8 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-12 relative overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">

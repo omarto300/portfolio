@@ -28,7 +28,7 @@ export default function DeveloperPortfolio({ handleNavigation }) {
   const techStack = ["Java", "Spring Boot", "Node.js", "SQL", "Docker", "Microservicios"];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-8 sm:py-12 px-4">
+    <div className="py-8 sm:py-12 px-4">
       <div className="container mx-auto">
         {/* Hero Section */}
         <section className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12 mb-8 overflow-hidden relative">

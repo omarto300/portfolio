@@ -28,12 +28,12 @@ function App() {
   };
 
   return (
-    <>
-      <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
-        {<Navbar handleNavigation={handleNavigation} activePage={activePage} />}
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
+      <Navbar handleNavigation={handleNavigation} activePage={activePage} />
+      <main className="min-h-[calc(100vh-5rem)]">
         {renderPage()}
-      </div>
-    </>
+      </main>
+    </div>
   );
 }
 
