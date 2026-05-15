@@ -1,4 +1,6 @@
-const NavButton = ({ icon: Icon, label, isActive, onClick }) => {
+import { createElement } from "react";
+
+const NavButton = ({ icon, label, isActive, onClick }) => {
   return (
     <button
       onClick={onClick}
@@ -17,12 +19,12 @@ const NavButton = ({ icon: Icon, label, isActive, onClick }) => {
       
       {/* Contenido del botón (sin inclinación) */}
       <div className="relative flex items-center gap-2 px-6 py-3 z-10">
-        <Icon 
-          size={20} 
-          className={`transition-colors duration-300 ${
+        {createElement(icon, {
+          size: 20,
+          className: `transition-colors duration-300 ${
             isActive ? 'text-white' : 'text-gray-700 group-hover:text-white'
-          }`}
-        />
+          }`,
+        })}
         <span 
           className={`font-semibold transition-colors duration-300 ${
             isActive ? 'text-white' : 'text-gray-700 group-hover:text-white'

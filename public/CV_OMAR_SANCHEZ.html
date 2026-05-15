@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Omar Sánchez Santiago</title>
+    <style>
+      @page {
+        size: letter;
+        margin: 13mm 14mm;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: #1f2937;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10.4px;
+        line-height: 1.35;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      .page {
+        width: 100%;
+      }
+
+      .header {
+        border-bottom: 2px solid #111827;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+      }
+
+      .name {
+        color: #111827;
+        font-size: 25px;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+      }
+
+      .role {
+        color: #374151;
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 2px;
+      }
+
+      .contact {
+        color: #4b5563;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        font-size: 9.8px;
+        margin-top: 7px;
+      }
+
+      .section {
+        margin-top: 9px;
+      }
+
+      .section-title {
+        border-bottom: 1px solid #d1d5db;
+        color: #111827;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        margin-bottom: 5px;
+        padding-bottom: 2px;
+        text-transform: uppercase;
+      }
+
+      .summary {
+        color: #374151;
+        text-align: justify;
+      }
+
+      .skills {
+        color: #374151;
+      }
+
+      .job {
+        margin-top: 8px;
+        break-inside: avoid;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 3px;
+      }
+
+      .job-title {
+        color: #111827;
+        font-size: 11.2px;
+        font-weight: 800;
+      }
+
+      .job-meta {
+        color: #4b5563;
+        font-size: 9.8px;
+        font-weight: 700;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 16px;
+      }
+
+      li {
+        margin-bottom: 2px;
+      }
+
+      .education-row,
+      .language-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .institution {
+        color: #111827;
+        font-weight: 800;
+      }
+
+      .muted {
+        color: #4b5563;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <h1 class="name">Omar Sánchez Santiago</h1>
+        <p class="role">Desarrollador Backend Java</p>
+        <div class="contact">
+          <span>Tel. 55 7922 6153</span>
+          <span>omar.sanchez9203@gmail.com</span>
+          <span>https://omarto300.github.io/portfolio/</span>
+          <span>GitHub: github.com/omarto300</span>
+          <span>LinkedIn: linkedin.com/in/omar920305</span>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">Perfil Profesional</h2>
+        <p class="summary">
+          Ingeniero en Sistemas Computacionales con más de 8 años de experiencia como
+          desarrollador backend/web, especializado en Java, JavaScript y SQL. Experiencia
+          en integración de servicios REST y SOAP, arquitectura de microservicios,
+          migración desde monolitos, mensajería con Kafka y RabbitMQ, contenedores con
+          Docker/Kubernetes, pruebas unitarias e integración, análisis de calidad de
+          código y optimización de procesos críticos.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <p class="skills">
+          Java, JavaScript, SQL, REST, SOAP, Microservicios, Spring Boot, Spring Cloud,
+          Kafka, RabbitMQ, Docker, Kubernetes, Maven, Jenkins, Git, Jira, Confluence,
+          Control-M, Bash, SonarQube, JUnit, Spock, Oracle, SQL Server, EJB, PrimeFaces,
+          JDBC, JBoss.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Experiencia Profesional</h2>
+
+        <article class="job">
+          <div class="job-header">
+            <div>
+              <h3 class="job-title">IDS (Banamex) - Desarrollador Backend</h3>
+              <p class="muted">Remoto</p>
+            </div>
+            <p class="job-meta">Febrero 2023 - Julio 2025</p>
+          </div>
+          <ul>
+            <li>Creación y modificación de microservicios para el área de apertura de cuentas de Banamex.</li>
+            <li>Integración de servicios backend mediante APIs REST y SOAP.</li>
+            <li>Migración de módulos desde aplicaciones monolíticas hacia microservicios con arquitectura hexagonal.</li>
+            <li>Refactorización de código para reducir deuda técnica y cumplir estándares de calidad y seguridad.</li>
+            <li>Integración de Apache Maven en proyectos sin gestor de dependencias para facilitar despliegues continuos.</li>
+            <li>Cobertura de código con pruebas unitarias e integración usando Spock.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-header">
+            <div>
+              <h3 class="job-title">Banco Azteca - Líder Técnico</h3>
+              <p class="muted">CDMX, México</p>
+            </div>
+            <p class="job-meta">Junio 2021 - Marzo 2023</p>
+          </div>
+          <ul>
+            <li>Asignación de requerimientos al equipo según experiencia y prioridad.</li>
+            <li>Análisis de requerimientos para estimación y cualificación de esfuerzos.</li>
+            <li>Revisión de código y aprobación de pull requests.</li>
+            <li>Diseño e implementación de arquitectura de microservicios con Spring Cloud, Gateway, Eureka, Config, Feign y WebClient.</li>
+            <li>Mejora de cobertura de pruebas con JUnit y análisis estático con SonarQube.</li>
+            <li>Optimización de flujos batch mediante concurrencia, reduciendo tiempos de ejecución de 1 hora a 10-15 minutos.</li>
+            <li>Desarrollo de capa de acceso a datos en Oracle y SQL Server.</li>
+            <li>Despliegue de aplicaciones usando Kubernetes, Docker y Argo.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-header">
+            <div>
+              <h3 class="job-title">ThTec - Desarrollador Backend</h3>
+              <p class="muted">CDMX, México</p>
+            </div>
+            <p class="job-meta">Abril 2020 - Junio 2021</p>
+          </div>
+          <ul>
+            <li>Desarrollo de nuevos módulos backend utilizando EJB.</li>
+            <li>Creación de interfaces web con PrimeFaces.</li>
+            <li>Automatización de reportes ejecutivos dinámicos con Apache POI.</li>
+            <li>Modelado y consumo de datos con JDBC y pool de conexiones con Oracle.</li>
+            <li>Implementación de seguridad con EJB Security y control de acceso por roles.</li>
+            <li>Despliegue de aplicaciones en servidores JBoss.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Educación</h2>
+        <div class="education-row">
+          <div>
+            <p class="institution">Instituto Tecnológico de Tlaxiaco</p>
+            <p class="muted">Ingeniería en Sistemas Computacionales</p>
+          </div>
+          <p class="job-meta">Tlaxiaco, Oaxaca | Julio 2015</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Idiomas</h2>
+        <div class="language-row">
+          <p>Español: Nativo</p>
+          <p>Inglés: Nivel medio</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

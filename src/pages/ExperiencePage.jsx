@@ -4,55 +4,56 @@ import { Briefcase, Code, Clock, Building2, Layers } from 'lucide-react';
 const ExperiencePage = () => {
   const experiences = [
     {
-      company: "IDS Comercial",
-      position: "Senior Java Developer",
+      company: "IDS (Banamex)",
+      position: "Desarrollador Backend",
       period: "Febrero 2023 - Julio 2025",
       responsibilities: [
-        "Desarrollo de microservicios con Spring Boot y arquitectura hexagonal",
-        "Implementación de APIs RESTful escalables",
-        "Liderazgo técnico de equipo de 5 desarrolladores",
-        "Code reviews y mentorías a desarrolladores junior"
+        "Creación y modificación de microservicios para el área de apertura de cuentas de Banamex",
+        "Integración de servicios backend mediante APIs REST y SOAP",
+        "Migración de módulos desde aplicaciones monolíticas hacia microservicios",
+        "Refactorización de código para reducir deuda técnica y cumplir estándares de calidad y seguridad"
       ],
       achievements: [
-        "Reducción del 40% en tiempos de respuesta mediante optimización de queries",
-        "Implementación exitosa de sistema de autenticación JWT",
-        "Migración de monolito a microservicios sin downtime"
+        "Integración de Apache Maven en proyectos sin gestor de dependencias para facilitar despliegues continuos",
+        "Implementación de arquitectura hexagonal y comunicación REST para mejorar escalabilidad",
+        "Cobertura de código con pruebas unitarias e integración usando Spock"
       ],
-      technologies: ["Java 17", "Spring Boot", "Hibernate", "PostgreSQL", "Docker", "Kubernetes", "Redis", "RabbitMQ"]
+      technologies: ["Java", "Spring Boot", "REST", "SOAP", "Maven", "Spock", "Docker", "Kubernetes"]
     },
     {
       company: "Banco Azteca",
-      position: "Java Lead Developer",
-      period: "Marzo 2020 - Febrero 2023",
+      position: "Líder Técnico",
+      period: "Junio 2021 - Marzo 2023",
       responsibilities: [
-        "Desarrollo de aplicaciones empresariales con Java EE",
-        "Integración con sistemas legacy mediante APIs SOAP",
-        "Optimización de rendimiento de base de datos",
-        "Participación en diseño de arquitectura de soluciones"
+        "Asignación de requerimientos al equipo según experiencia y prioridad",
+        "Análisis de requerimientos para estimación y cualificación de esfuerzos",
+        "Revisión de código y aprobación de pull requests",
+        "Versionamiento e implementación de cambios en ambientes QA y producción"
       ],
       achievements: [
-        "Desarrollo de módulo de reportes que procesaba 100k+ registros",
-        "Implementación de caché distribuido mejorando performance 60%",
-        "Automatización de procesos batch reduciendo errores manuales"
+        "Diseño e implementación de arquitectura de microservicios con Spring Cloud, Gateway, Eureka, Config, Feign y WebClient",
+        "Optimización de flujos batch mediante concurrencia, reduciendo ejecuciones de 1 hora a 10-15 minutos",
+        "Mejora de cobertura de pruebas con JUnit y análisis estático con SonarQube",
+        "Desarrollo de capa de acceso a datos en Oracle y SQL Server"
       ],
-      technologies: ["Java 11", "Spring Framework", "Hibernate", "MySQL", "Maven", "JUnit", "Mockito", "Jenkins"]
+      technologies: ["Java", "Spring Cloud", "Gateway", "Eureka", "Feign", "WebClient", "JUnit", "SonarQube", "Oracle", "SQL Server", "Docker", "Kubernetes", "Argo"]
     },
     {
-      company: "TH Tec",
-      position: "Java Developer",
-      period: "Febrero 2019 - Febrero 2020",
+      company: "ThTec",
+      position: "Desarrollador Backend",
+      period: "Abril 2020 - Junio 2021",
       responsibilities: [
-        "Desarrollo de funcionalidades backend para plataforma web",
-        "Mantenimiento y corrección de bugs en código existente",
-        "Creación de pruebas unitarias e integración",
-        "Documentación técnica de APIs"
+        "Desarrollo de nuevos módulos backend con EJB",
+        "Creación de interfaces web con PrimeFaces",
+        "Modelado y consumo de datos con JDBC y pool de conexiones",
+        "Despliegue de aplicaciones en servidores JBoss"
       ],
       achievements: [
-        "Implementación de sistema de notificaciones en tiempo real",
-        "Refactorización de módulo crítico mejorando mantenibilidad",
-        "Contribución en reducción de deuda técnica del proyecto"
+        "Automatización de reportes ejecutivos dinámicos con Apache POI",
+        "Implementación de seguridad con EJB Security y control de acceso por roles",
+        "Integración con base de datos Oracle"
       ],
-      technologies: ["Java 8", "Spring Boot", "JPA", "MongoDB", "Git", "REST APIs", "Swagger"]
+      technologies: ["Java", "EJB", "PrimeFaces", "JDBC", "Oracle", "Apache POI", "EJB Security", "JBoss"]
     }
   ];
 
@@ -65,13 +66,13 @@ const ExperiencePage = () => {
             <Briefcase className="w-8 h-8 text-gray-800 shrink-0" />
             <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">Experiencia Profesional</h1>
           </div>
-          <p className="text-slate-600 text-lg mb-5">Trayectoria como desarrollador Java</p>
+          <p className="text-slate-600 text-lg mb-5">Trayectoria como desarrollador backend Java</p>
 
           {/* Stats chips */}
           <div className="flex flex-wrap gap-3">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm">
               <Clock className="w-4 h-4 text-gray-500" />
-              7+ Años de experiencia
+              8+ Años de experiencia
             </span>
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-semibold text-gray-700 shadow-sm">
               <Building2 className="w-4 h-4 text-gray-500" />

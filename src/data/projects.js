@@ -1,10 +1,10 @@
-import portfolioImg from '../assets/proyects/portfolio.png';
+import portfolioImg from '../assets/projects/portfolio.png';
 
-const proyectos = [
+const projects = [
   {
     id: 1,
     title: "Portfolio Personal",
-    description: "Sitio web personal para mostrar mis proyectos, experiencia y habilidades como desarrollador.",
+    description: "Sitio web personal para mostrar mis proyectos y experiencia como desarrollador.",
     image: portfolioImg,
     technologies: ["React", "Tailwind CSS", "Vite"],
     category: "Web",
@@ -15,7 +15,7 @@ const proyectos = [
   },
   {
     id: 2,
-    title: "Problemas de codigo",
+    title: "Problemas de código",
     description: "Repositorio con soluciones a problemas de código en plataformas como LeetCode, HackerRank y CodeSignal, utilizando Java y JavaScript.",
     image: null,
     technologies: ["Java", "JavaScript", "Node.js", "Go"],
@@ -75,4 +75,4 @@ const proyectos = [
   },
 ];
 
-export default proyectos;
+export default projects;

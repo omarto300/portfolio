@@ -25,7 +25,18 @@ export default function DeveloperPortfolio({ handleNavigation }) {
     window.open(linkPage, '_blank');
   };
 
-  const techStack = ["Java", "Spring Boot", "Node.js", "SQL", "Docker", "Microservicios"];
+  const techStack = [
+    "Java",
+    "JavaScript",
+    "SQL",
+    "REST",
+    "Microservicios",
+    "Kafka",
+    "Docker",
+    "Kubernetes",
+    "RabbitMQ",
+    "Jenkins",
+  ];
 
   return (
     <div className="py-8 sm:py-12 px-4">
@@ -64,10 +75,11 @@ export default function DeveloperPortfolio({ handleNavigation }) {
                   <span className="font-bold text-gray-900">
                     8 años de experiencia
                   </span>{" "}
-                  especializado en Java, JavaScript y SQL. Experto en diseñar e
-                  implementar arquitecturas escalables, desde monolitos hasta
-                  microservicios, utilizando protocolos de comunicación como
-                  REST, AMQP y WebSockets.
+                  especializado en Java, JavaScript y SQL. He trabajado en
+                  desarrollo web backend, integración de servicios REST y SOAP,
+                  migración de monolitos a microservicios, mensajería con Kafka
+                  y RabbitMQ, contenedores con Docker/Kubernetes y optimización
+                  de procesos críticos.
                 </p>
               </div>
 

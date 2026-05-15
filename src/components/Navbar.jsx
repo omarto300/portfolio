@@ -1,11 +1,11 @@
 import NavButton from "./NavButton";
 import { useState, useEffect } from "react";
-import { Home, User, Code, Mail, Menu, X } from "lucide-react";
+import { Home, FolderKanban, Code, Mail, Menu, X } from "lucide-react";
 
 const pages = [
   { name: "home", label: "Inicio", icon: Home },
-  { name: "projects", label: "Proyectos", icon: User },
-  { name: "experience", label: "Experience", icon: Code },
+  { name: "projects", label: "Proyectos", icon: FolderKanban },
+  { name: "experience", label: "Experiencia", icon: Code },
   { name: "contact", label: "Contacto", icon: Mail },
 ];
 

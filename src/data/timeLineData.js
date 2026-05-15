@@ -82,8 +82,8 @@ const timelineData = [
       year: '2019',
       type: 'work',
       branch: 'career',
-      title: 'THTEC',
-      description: 'Desarrollador Web, asignado a Banco Azteca de Grupo Salinas',
+      title: 'ThTec',
+      description: 'Desarrollador Backend',
       icon: Briefcase,
       color: 'from-amber-500 to-orange-500',
       position: 'right'
@@ -93,8 +93,8 @@ const timelineData = [
       year: '2020',
       type: 'work',
       branch: 'career',
-      title: 'Banco Azteca - Grupo Salinas',
-      description: 'Lider Tecnico de Desarrollo Web',
+      title: 'Banco Azteca',
+      description: 'Líder Técnico',
       icon: Briefcase,
       color: 'from-amber-500 to-orange-500',
       position: 'left'
@@ -104,22 +104,11 @@ const timelineData = [
       year: '2023',
       type: 'work',
       branch: 'career',
-      title: 'IDS Comercial',
-      description: 'Desarrollor Midleware Java',
+      title: 'IDS (Banamex)',
+      description: 'Desarrollador Backend',
       icon: Briefcase,
       color: 'from-amber-500 to-orange-500',
       position: 'right'
-    },
-     {
-      id: 11,
-      year: '2025',
-      type: 'work',
-      branch: 'career',
-      title: 'Softtek',
-      description: 'Desarrollor Java',
-      icon: Briefcase,
-      color: 'from-amber-500 to-orange-500',
-      position: 'left'
     }
   ];
   export default timelineData;

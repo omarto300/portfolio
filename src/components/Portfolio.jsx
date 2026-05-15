@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Code2 } from 'lucide-react';
-import ProjectCard from './feactures/ProjectCard';
-import projects from '../data/proyects';
+import ProjectCard from './features/ProjectCard';
+import projects from '../data/projects';
 
 const CATEGORIES = ['Todos', 'Web', 'Backend', 'Freelance', 'Algoritmos'];
 

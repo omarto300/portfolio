@@ -1,6 +1,26 @@
 import emailcon from "../assets/email.svg";
 
 const Contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const details = formData.get("details")?.trim();
+
+    const message = [
+      "Hola Omar, me gustaría contactarte.",
+      details ? `Mensaje: ${details}` : null,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    window.open(
+      `https://wa.me/525579226153?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   return (
     <div className="py-8 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
@@ -11,7 +31,7 @@ const Contact = () => {
                 Datos de Contacto
               </h2>
               <p className="mb-8 text-base text-gray-500">
-                ¿Tienes un proyecto en mente? Escríbeme y con gusto me pongo en contacto contigo.
+                ¿Tienes un proyecto en mente? Escríbeme por WhatsApp y con gusto me pongo en contacto contigo.
               </p>
 
               <div className="mb-8 flex items-start gap-4">
@@ -60,28 +80,13 @@ const Contact = () => {
                   <h4 className="mb-1 text-lg font-bold text-gray-800">
                     Email
                   </h4>
-                  <p className="text-gray-500">omar.sacnhez9203@gmail.com</p>
+                  <p className="text-gray-500">omar.sanchez9203@gmail.com</p>
                 </div>
               </div>
             </div>
 
             <div className="relative rounded-xl bg-gray-50 p-6 sm:p-8">
-              <form>
-                <ContactInputBox
-                  type="text"
-                  name="name"
-                  placeholder="Nombre Completo"
-                />
-                <ContactInputBox
-                  type="text"
-                  name="email"
-                  placeholder="Correo Electrónico"
-                />
-                <ContactInputBox
-                  type="text"
-                  name="phone"
-                  placeholder="Teléfono"
-                />
+              <form onSubmit={handleSubmit}>
                 <ContactTextArea
                   row="6"
                   placeholder="Mensaje"
@@ -93,7 +98,7 @@ const Contact = () => {
                     type="submit"
                     className="w-full rounded-lg bg-gray-900 p-3 text-white font-medium transition hover:bg-gray-700"
                   >
-                    Enviar Mensaje
+                    Enviar por WhatsApp
                   </button>
                 </div>
               </form>
@@ -133,19 +138,6 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
         name={name}
         className="w-full resize-none rounded-lg border border-gray-200 bg-white px-4 py-3 text-base text-gray-700 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
         defaultValue={defaultValue}
-      />
-    </div>
-  );
-};
-
-const ContactInputBox = ({ type, placeholder, name }) => {
-  return (
-    <div className="mb-5">
-      <input
-        type={type}
-        placeholder={placeholder}
-        name={name}
-        className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-base text-gray-700 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
       />
     </div>
   );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Proyects from "./pages/ProyectsPage";
+import Projects from "./pages/ProjectsPage";
 import HomePage from "./pages/HomePage";
 import ExperiencePage from "./pages/ExperiencePage";
 import Navbar from "./components/Navbar";
@@ -17,7 +17,7 @@ function App() {
       case "home":
         return <HomePage handleNavigation={handleNavigation} />;
       case "projects":
-        return <Proyects />;
+        return <Projects />;
       case "experience":
         return <ExperiencePage />;
       case "contact":
